@@ -1,15 +1,11 @@
-# Função para verificar se um número é par ou ímpar
-def verificar_paridade(numero):
-    if numero % 2 == 0:
-        return "par"
-    else:
-        return "ímpar"
+idade = int(input('coloque sua idade: '))
 
-# Solicita ao usuário que insira um número
-numero = int(input("Digite um número: "))
+if idade < 0:
+    print('idade invalida, coloque um número positivo')
+if idade <= 12:
+    print('você é uma criança')
+elif idade <= 18:
+    print('você é um adolescente')
+else:
+    print('você é um adulto')
 
-# Verifica se o número é par ou ímpar
-resultado = verificar_paridade(numero)
-
-# Exibe o resultado
-print(f"O número {numero} é {resultado}.")

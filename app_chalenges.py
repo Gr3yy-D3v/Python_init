@@ -1,13 +1,13 @@
-# Define os valores esperados para o nome de usuário e a senha
-usuario_esperado = "usuario123"
-senha_esperada = "senha123"
+coordenada_x = int(input("me diga um numero onde está X "))
+coordenada_Y = int(input("me diga um numero onde está Y "))
 
-# Solicita ao usuário que insira o nome de usuário e a senha
-usuario_fornecido = input("Digite o nome de usuário: ")
-senha_fornecida = input("Digite a senha: ")
-
-# Verifica se o nome de usuário e a senha correspondem aos valores esperados
-if usuario_fornecido == usuario_esperado and senha_fornecida == senha_esperada:
-    print("Acesso concedido.")
+if coordenada_x and coordenada_Y > 0:
+    print("Você está no primeiro quadrante")
+elif coordenada_x < 0 and coordenada_Y > 0:
+    print("Você está no segundo quadrante")
+elif coordenada_x and coordenada_Y < 0:
+    print("Você está no terceiro quadrante")
+elif coordenada_x > 0 and coordenada_Y < 0:
+    print("Você está no quarto quadrante")
 else:
-    print("Nome de usuário ou senha incorretos. Acesso negado.")
+    print("Você está no ponto de origem")

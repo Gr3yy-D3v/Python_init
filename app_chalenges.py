@@ -1,7 +1,19 @@
-# Solicita ao usuário que insira um número
-numero = int(input("Digite um número para ver sua tabuada: "))
+# Cria uma lista de números
+numeros = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
-# Usa um loop for para percorrer os números de 1 a 10
-for o in range(1, 11):
-    resultado = numero * o
-    print(f"{numero} x {o} = {resultado}")
+# Inicializa a variável para armazenar a soma
+soma = 0
+
+try:
+    # Usa um loop for para percorrer todos os elementos da lista
+    for numero in numeros:
+        soma += numero
+    
+    # Exibe o resultado da soma
+    print("A soma de todos os elementos da lista é:", soma)
+except TypeError as a:
+    # Captura e lida com a exceção do tipo TypeError
+    print("Ocorreu um erro ao tentar somar os elementos da lista:", a)
+except Exception as a:
+    # Captura e lida com qualquer outra exceção
+    print("Ocorreu um erro inesperado:", a)

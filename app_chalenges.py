@@ -1,19 +1,21 @@
-# Cria uma lista de números
-numeros = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-
-# Inicializa a variável para armazenar a soma
-soma = 0
+# Cria uma lista de números (pode estar vazia para testar a exceção)
+numeros = [8,20,45,63,250,20]
 
 try:
-    # Usa um loop for para percorrer todos os elementos da lista
-    for numero in numeros:
-        soma += numero
+    # Calcula a soma dos elementos da lista
+    soma = sum(numeros)
     
-    # Exibe o resultado da soma
-    print("A soma de todos os elementos da lista é:", soma)
-except TypeError as a:
-    # Captura e lida com a exceção do tipo TypeError
-    print("Ocorreu um erro ao tentar somar os elementos da lista:", a)
-except Exception as a:
+    # Calcula a quantidade de elementos na lista
+    quantidade = len(numeros)
+    
+    # Tenta calcular a média dos elementos da lista
+    media = soma / quantidade
+    
+    # Exibe o resultado da média
+    print("A média dos valores na lista é:", media)
+except ZeroDivisionError as e:
+    # Captura e lida com a exceção de divisão por zero
+    print("Erro: não é possível calcular a média de uma lista vazia.")
+except Exception as e:
     # Captura e lida com qualquer outra exceção
-    print("Ocorreu um erro inesperado:", a)
+    print("Ocorreu um erro inesperado:", e)
